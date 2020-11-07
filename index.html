@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./style.css">
+    <title>Event Bubbling and Event Capturing</title>
+</head>
+<body>
+    <div class="navigation">
+        <a href="#1" class="item active">
+            <span>1</span>
+            <div class="tooltip">Profile</div>
+        </a>
+        <a href="#2" class="item">
+            <span>2</span>
+            <div class="tooltip">Introduction</div>
+        </a>
+        <a href="#3" class="item">
+            <span>3</span>
+            <div class="tooltip">Events</div>
+        </a>
+        <a href="#4" class="item">
+            <span>4</span>
+            <div class="tooltip">Event Flow</div>
+        </a>
+        <a href="#5" class="item">
+            <span>5</span>
+            <div class="tooltip">Event Bubbling</div>
+        </a>
+        <a href="#6" class="item">
+            <span>6</span>
+            <div class="tooltip">Demo</div>
+        </a>
+        <a href="#7" class="item">
+            <span>7</span>
+            <div class="tooltip">Practical</div>
+        </a>
+        <a href="#8" class="item">
+            <span>8</span>
+            <div class="tooltip">Event Capturing</div>
+        </a>
+        <a href="#9" class="item">
+            <span>9</span>
+            <div class="tooltip">Demo</div>
+        </a>
+        <a href="#10" class="item">
+            <span>10</span>
+            <div class="tooltip">target vs currentTarget</div>
+        </a>
+        <a href="#11" class="item">
+            <span>11</span>
+            <div class="tooltip">Event Phase</div>
+        </a>
+        <a href="#12" class="item">
+            <span>12</span>
+            <div class="tooltip">Description</div>
+        </a>
+        <a href="#13" class="item">
+            <span>13</span>
+            <div class="tooltip">Demo</div>
+        </a>
+        <a href="#14" class="item">
+            <span>14</span>
+            <div class="tooltip">event.bubbles</div>
+        </a>
+        <a href="#15" class="item">
+            <span>15</span>
+            <div class="tooltip">Stop Propogation</div>
+        </a>
+        <a href="#16" class="item">
+            <span>16</span>
+            <div class="tooltip">event.preventDefault</div>
+        </a>
+        <a href="#17" class="item">
+            <span>17</span>
+            <div class="tooltip">Thank You</div>
+        </a>
+    </div>
+
+    <div id="1" class="wrapper primary-slide">
+        <div class="paragraph">
+            <h2>Gopalakrishnan C</h2>
+            <h4>Ui Developer at Infosys</h4>
+        </div>
+    </div>
+
+    <div id="2" class="wrapper secondary-slide">
+        Event Bubbling & <br /> Event Capturing
+    </div>
+
+    <div id="3" class="wrapper teritary-slide">
+        Events
+        <div class="paragraph">
+            <p>
+                Events are actions or occurrences that happen in the system you are programming, which the system tells you about so you can respond to them in some way if desired.
+            </p>
+            <p>
+                Eg: if the user selects a button on a webpage, you might want to respond to that action by displaying an information box.
+            </p>
+        </div>
+    </div>
+
+    <div id="4" class="wrapper primary-slide">
+        Event Flow
+        <div class="paragraph">
+            <p>
+                Event flow is the order in which event is received on the web page.
+            </p>
+        </div>
+    </div>
+
+    <div id="5" class="wrapper secondary-slide">
+        Event Bubbling
+        <div class="paragraph">
+            <p>
+                Event Bubbling is the event starts from the deepest element or target element to its parents, then all its ancestors which are on the way to bottom to top.
+            </p>
+            <p>
+                All the modern browsers have event bubbling as the default way of event flow.
+            </p>
+        </div>
+    </div>
+
+    <div id="6" class="wrapper demo-slide">
+        <div class="bubble" >
+            <div class="bubble">
+              <div class="bubble">
+                <div class="bubble">
+                  <div class="bubble"></div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="link-wrapper">
+            <a class="link" target="_blank" href="https://codepen.io/gopal1996/pen/XWKPPoj">codepen</a>
+        </div>
+    </div>
+
+    <div id="7" class="wrapper primary-slide">
+        Practical Use Case
+
+        <div class="link-wrapper">
+            <a class="link" target="_blank" href="https://gopal1996.github.io/PixelArt/">Event Delegation - Bubbling</a>
+        </div>
+
+        <div class="link-wrapper">
+            <a class="link" target="_blank" href="https://codepen.io/gopal1996/pen/XWKPYqV">Event Delegation - Capturing</a>
+        </div>
+    </div>
+
+    <div id="8" class="wrapper secondary-slide">
+        Event Capturing
+        <div class="paragraph">
+            <p>
+                Event Capturing is the event starts from top element to target element.
+            </p>
+            <p>
+                Modern browser doesn’t support event capturing by default but we can achieve that by code in JavaScript.
+            </p>
+        </div>
+    </div>
+
+    <div id="9" class="wrapper demo-slide">
+        <div class="capture" >
+            <div class="capture">
+              <div class="capture">
+                <div class="capture">
+                  <div class="capture"></div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="link-wrapper">
+            <a class="link" target="_blank" href="https://codepen.io/gopal1996/pen/ExyeerZ">codepen</a>
+        </div>
+    </div>
+
+    <div id="10" class="wrapper primary-slide">
+        target vs currentTarget
+        <div class="paragraph">
+            <p>
+                event.target – is the “target” element that initiated the event, it doesn’t change through the bubbling process.
+            </p>
+            <p>
+                event.currentTarget - is the “current” element, the one that has a currently running handler on it.
+            </p>
+        </div>
+    </div>
+
+    <div id="14" class="wrapper primary-slide">
+        event.bubbles
+    </div>
+
+    <div id="11" class="wrapper secondary-slide">
+        Event Phase
+    </div>
+
+    <div id="12" class="wrapper teritary-slide">
+        <div class="paragraph">
+            <p>
+                The eventPhase read-only property of the Event interface indicates which phase of the event flow is currently being evaluated.
+            </p>
+            <table class="standard-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Constant</th>
+                        <th scope="col">Value</th>
+                        <th scope="col">Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>Event.NONE</code></td>
+                        <td><code>0</code></td>
+                        <td>No event is triggered.</td>
+                    </tr>
+                    <tr>
+                        <td><code>Event.CAPTURING_PHASE</code></td>
+                        <td><code>1</code></td>
+                        <td>The event flow is in capturing phase.</td>
+                    </tr>
+                    <tr>
+                        <td><code>Event.AT_TARGET</code></td>
+                        <td><code>2</code></td>
+                        <td>The event flow is in target phase.</td>
+                    </tr>
+                    <tr>
+                        <td><code>Event.BUBBLING_PHASE</code></td>
+                        <td><code>3</code></td>
+                        <td>The event flow is in bubbling phase.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="link-wrapper">
+                <a class="link" target="_blank" href="https://codepen.io/gopal1996/pen/wvWEeRy">codepen</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="13" class="wrapper demo-slide">
+        <div class="mix" >
+            <div class="mix">
+              <div class="mix">
+                <div class="mix">
+                  <div class="mix"></div>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <ul class="indicator">
+            <li class="indicator--button capture-indicator">Capture</li>
+            <li class="indicator--button target-indicator">target</li>
+            <li class="indicator--button bubble-indicator">bubble</li>
+        </ul>
+
+        <div class="link-wrapper">
+            <a class="link" target="_blank" href="https://codepen.io/gopal1996/pen/vYKzVKV">codepen</a>
+        </div>
+    </div>
+
+    <div id="15" class="wrapper secondary-slide">
+        Stop Propagation
+        <button id="open-modal" class="custom-button">Popup</button>
+        <div class="modal">
+            DevKode
+        </div>
+
+        <div class="link-wrapper">
+            <a class="link" target="_blank" href="https://codepen.io/gopal1996/pen/jOrvKvy">codepen</a>
+        </div>
+    </div>
+
+    <div id="16" class="wrapper teritary-slide">
+        event.preventDefault
+    </div>
+
+    <div id="17" class="wrapper primary-slide">
+        Thank you
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>

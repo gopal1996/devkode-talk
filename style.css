@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+
+:root {
+    --demo-slide: #FAD257;
+    --primary-slide: #0798EC;
+    --secondary-slide: #FC6C7C;
+    --tertiary-slide: #FF5F45;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+    font-size: 8rem;
+    flex-direction: column;
+}
+
+.wrapper--column {
+    flex-direction: column;
+}
+
+.paragraph {
+    font-size: 3rem;
+    padding: 0 3rem;
+    margin: 1rem auto;
+}
+
+.paragraph p {
+    margin-bottom: 1rem;
+}
+
+.standard-table {
+    text-align: left;
+    font-size: 2rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+.standard-table td,th {
+    padding: 0 1.5rem;
+}
+
+.primary-slide {
+    background: var(--primary-slide);
+}
+.secondary-slide {
+    background: var(--secondary-slide);
+}
+.teritary-slide {
+    background: var(--tertiary-slide);
+}
+
+.demo-slide {
+    background: var(--demo-slide);
+}
+
+.bubble-indicator {
+    background: #4DCDCE !important;
+}
+.capture-indicator {
+    background: #53165C !important;
+}
+.target-indicator {
+    background: #C12C22 !important;
+}
+
+.navigation {
+    position: fixed;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    width: 0.5rem;
+    height: 0.5rem;
+    margin: .5rem;
+    position: relative;
+    border-radius: 50%;
+    background: #fff;
+    text-decoration: none;
+    transition: all 200ms ease-in;
+}
+
+.active {
+    transform: scale(1.9);
+}
+
+.active:hover {
+    transform: scale(1.9) !important;
+}
+
+.item:hover {
+    text-decoration: none;
+    transform: scale(1.4);
+}
+
+.item span {
+    opacity: 0;
+}
+
+.item:hover .tooltip {
+    display: block;
+}
+
+.tooltip {
+    position: absolute;
+    top: 50%;
+    right: 105%;
+    white-space: nowrap;
+    transform: translateY(-50%);
+    color: #3d73e6;
+    padding: 0.2rem;
+    border-radius: 4px;
+    z-index: 20;
+    font-size: .625rem;
+    background: #fff;
+    display: none;
+}
+
+.bubble, .capture, .mix {
+    border: 1px solid #000;
+    padding: 40px;
+    background: #fff;
+}
+
+.indicator {
+    list-style-type: none;
+    font-size: 1rem;
+    display: flex;
+    margin-top: 2rem;
+}
+
+.indicator > li {
+    margin-right: 1rem;
+}
+
+.indicator--button {
+    padding: .5rem 1rem;
+    border-radius: 3px;
+}
+
+.link-wrapper {
+    text-align: center;
+}
+
+.link {
+    margin-top: 2rem;
+    font-size: 2rem;
+    padding: .5rem 1rem;
+    outline: none;
+    border: 0;
+    background: #fff;
+    text-decoration: none;
+    color: var(--tertiary-slide);
+    border-radius: 3px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+    transition: all .3s;
+}
+
+.link:hover {
+    transform: translateY(3px);
+    color: var(--tertiary-slide);
+}
+
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 18rem;
+    height: 18rem;
+    background: #fff;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+    z-index: 200;
+    color: #000;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal-open {
+    display: flex;
+}
+
+.custom-button {
+    margin: 1rem 0;
+    padding: .5rem 1rem;
+    border-radius: 3px;
+    outline: none;
+    border: 0;
+    cursor: pointer;
+    transform: translateY(0);
+    transition: all .3s;
+}
+
+.custom-button:hover {
+    transform: translateY(-2px);
+}
+
+.custom-button:active {
+    transform: translateY(0);
+}
+
+/* Media Query */
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 40%;
+    }
+
+    .item {
+        width: 1rem;
+        height: 1rem;
+        margin: 1rem;
+    }
+
+    .wrapper {
+        font-size: 4rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    html {
+        font-size: 70%;
+    }
+}
