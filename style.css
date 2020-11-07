@@ -91,6 +91,20 @@ body {
     flex-direction: column;
 }
 
+.social-media {
+    text-align: center;
+}
+
+.social-media .social-media--link {
+    text-decoration: none;
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+.social-media .social-media--link:last-child {
+    margin-right: 0;
+}
+
 .item {
     width: 0.5rem;
     height: 0.5rem;
