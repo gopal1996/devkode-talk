@@ -260,4 +260,8 @@ body {
     .wrapper {
         font-size: 4rem;
     }
+
+    .bubble, .capture, .mix {
+        padding: 30px;
+    }
 }
